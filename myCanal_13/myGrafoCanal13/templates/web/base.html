@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    {% block estilos %}
+    {% endblock estilos %}
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="icon" href="{% static 'img/LogoCanal13.png'%}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block nombrePestana %}
+        
+    {% endblock nombrePestana %}
+</head>
+<body>
+    <div class="siderbar">
+        <div class="logo_content">
+            <div class="logo" style="margin-left: 20px;">
+                <div class="logo_name">  Canal 13</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav_list">
+            <li>
+                <a href="{% url 'INDEX'%}">
+                    <i class='bx bx-home'></i>
+                    <span class="links_name">Inicio</span>
+                </a>
+                <span class="tooltip">Inicio</span>
+            </li>
+            <li>
+                <a href="{% url 'R'%}">
+                    <i class='bx bx-network-chart'></i>
+                    <span class="links_name">Red</span>
+                </a>
+                <span class="tooltip">Red</span>
+            </li>
+            <li>
+                <a href="{% url 'P'%}">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links_name">Panel-General</span>
+                </a>
+                <span class="tooltip">Panel-General</span>
+            </li>
+            <li>
+                <a href="{% url 'PF'%}">
+                    <i class='bx bxl-facebook-square'></i>
+                    <span class="links_name">Panel-Facebook</span>
+                </a>
+                <span class="tooltip">Panel-Facebook</span>
+            </li>
+            <li>
+                <a href="{% url 'PI'%}">
+                    <i class='bx bxl-instagram'></i>
+                    <span class="links_name">Panel-Instagram</span>
+                </a>
+                <span class="tooltip">Panel-Instagram</span>
+            </li>
+            <li>
+                <a href="{% url 'PT'%}">
+                    <i class='bx bxl-twitter'></i>
+                    <span class="links_name">Panel-Twitter</span>
+                </a>
+                <span class="tooltip">Panel-Twitter</span>
+            </li>
+            <li>
+                <a href="{% url 'C'%}">
+                    <i class='bx bx-cloud-upload'></i>
+                    <span class="links_name">Subir CSV</span>
+                </a>
+                <span class="tooltip">Subir CSV</span>
+            </li>
+        </ul>
+        <div class="profile_content">
+            <div class="profile">
+                <div class="profile_details">
+                    <img src="{% static 'img/gato.jpg'%}" alt="">
+                    <div class="name_job">
+                        <div class="name">{{user.username}}</div>
+                        <div class="job">Web Designer</div>
+                    </div>
+                </div>
+                <a href="{% url 'LOGOUT'%}"><i class='bx bx-log-out' id="log_out"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="home_content">
+        {% block contenido %}
+        
+        {% endblock contenido %}
+        <footer class="text-center">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4 mt-4">
+                <!-- Facebook -->
+                <div class="row">  
+                    <div class="col-6 duoc">
+                        <img src="{% static 'img/duocuc.png'%}" alt="">
+                    </div>
+                    <div class="col-6 canal">
+                        <img src="{% static 'img/canal13.png'%}" alt="">
+                    </div>
+                </div>
+            </section>
+            <div class="social">
+                <ul>
+                    <a href="#sda"><i class='bx bxl-facebook-circle bx-tada'></i></a>
+    
+                    <a href="#das"><i class='bx bxl-twitter bx-tada'></i></a>
+    
+                    <a href="#!"><i class='bx bxl-google bx-tada'></i></a>
+    
+                    <a href="#!"><i class='bx bxl-instagram bx-tada'></i></a>
+    
+                    <a href="#!"><i class='bx bxl-linkedin bx-tada'></i></a>
+                </ul>
+            </div>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+        <!-- Copyright -->
+        <div class="derecho text-center p-3">
+            <h1>© 2021 Citt DuocUC . Derecho de Autor</h1>
+        </div>
+        <!-- Copyright -->
+        </footer>
+    </div>
+    <!--<script src="{% static 'js/graphXR.injection.js'%}"></script>-->
+    <script src="{% static 'js/menu.js'%}"></script>
+</body>
+</html>

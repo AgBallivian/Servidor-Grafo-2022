@@ -1,0 +1,148 @@
+:root {
+	--main-radius: 12px;
+	--main-padding: 5px;
+  }
+  
+  body {
+	font-family: "Inter", sans-serif;
+  }
+  
+  .container-panel {
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 0.2fr 1.5fr 1.2fr;
+	grid-template-areas:
+	  "nav nav"
+	  "content1 content2"
+	  "content3 content3";
+	grid-gap: 0.6rem;
+	font-weight: 800;
+	text-transform: uppercase;
+	font-size: 12px;
+	color: #fb6900;
+	text-align: center;
+	margin: 15px;
+  }
+  
+  nav {
+	background: #36363c;
+	grid-area: nav;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+  }
+  
+  nav h1{
+	  color: white;
+  }
+
+  main {
+	background: #72706e;;
+	grid-area: main;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+  }
+  
+  
+  #content1 {
+	background: #fff;
+	grid-area: content1;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+  }
+  
+  #content2 {
+	background: #fff;
+	grid-area: content2;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+  }
+
+  #content3{
+	background: #fff;
+	grid-area: content3;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+  }
+
+  button.btn{
+	background-image: #fff;
+    border-radius: 20px;
+    border: 1px solid white;
+    color: #fb6900;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    padding: 0.9rem 4rem;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+#positivo{
+	border:2px solid white;
+	box-shadow:0 0 0 1px rgb(1, 184, 56);
+	appearance:none;
+	border-radius:50%;
+	width:12px;
+	height:12px;
+	background-color:#fff;
+	transition:all ease-in 0.2s;
+  
+  }
+  #positivo:checked{
+	background-color:rgb(1, 184, 56);
+  }
+  #negativo{
+	border:2px solid white;
+	box-shadow:0 0 0 1px rgb(231, 40, 6);
+	appearance:none;
+	border-radius:50%;
+	width:12px;
+	height:12px;
+	background-color:#fff;
+	transition:all ease-in 0.2s;
+  
+  }
+  #negativo:checked{
+	background-color:rgb(231, 40, 6);
+  }
+
+  #neutro{
+	border:2px solid white;
+	box-shadow:0 0 0 1px rgb(114, 107, 107);
+	appearance:none;
+	border-radius:50%;
+	width:12px;
+	height:12px;
+	background-color:#fff;
+	transition:all ease-in 0.2s;
+  
+  }
+  #neutro:checked{
+	background-color:rgb(114, 107, 107);
+  }
+
+/* Prueba */
+#message {
+	text-align: center;
+	font-size: 12em;
+  }
+  
+  @media only screen and (max-width: 1250px) {
+	.container-panel {
+	  grid-template-columns: 1fr;
+	  grid-template-rows: 0.5fr 1fr;
+	  grid-template-areas:
+		"nav"
+		"content1"
+		"content2"
+		"content3";
+	}
+	button.btn{
+		width: 20%;
+	}
+
+	
+  }
+  

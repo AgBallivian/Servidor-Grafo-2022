@@ -1,0 +1,47 @@
+{% extends "web/base.html" %}
+{% load static %}}
+{% block estilos %}
+    <link rel="stylesheet" href="{% static 'css/red.css'%}">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    
+    <script src="{% static 'js/GrafoD3s.js'%}"></script>
+{% endblock estilos %}
+{% block nombrePestana %}
+    <title>Red</title>
+{% endblock nombrePestana %}
+{% block contenido %}
+
+<div class="text">Grafo Canal 13</div>
+    <div class="row">
+        <div class="col-10">
+            <!--<iframe id="injection-graphXR-iframe-id"  origin="*"></iframe>-->
+          <div class="chart"></div>
+        </div>
+        <!--
+        <div class="col-2 twits">
+            <h1>Datos</h1>
+            <h1>Positivos : 250</h1>
+            <h1>Neutral : 59</h1>
+            <h1>Negativos : 101</h1>
+            <h1>Cantidad de Twists : 410</h1>
+            <h1>Dia  : 30/07/2021</h1>
+            <br>
+            <h1>Top 1 #</h1>
+            <h1>Top 2 #</h1>
+            <h1>Top 3 #</h1>
+            <h1>Top 4 #</h1>
+            <h1>Top 5 #</h1>
+        </div>
+        -->
+        <div class="col-md-12 mt-5">
+          <div id="chart"></div>
+          <script src="{% static 'js/histograma.js'%}"></script>
+        </div>
+</div>
+{% endblock contenido %}
+
+{% block js %}
+    <!--<script src="{% static 'js/graphXR.injection.js'%}"></script>-->
+    <script src="{% static 'js/menu.js'%}"></script>
+{% endblock js %}
