@@ -8,13 +8,20 @@ database = 'DB_T13'
 user = 'sa'
 passw = 'system'
 
-connString = ''.join([
-    'DRIVER={ODBC Driver 17 for SQL server}',
-    ';SERVER=', server,
-    ';DATABASE=', database,
-    ';UID=', user,
-    ';PWD=', passw
-])
+# connString = ''.join([
+#     'DRIVER={ODBC Driver 17 for SQL server};',
+#     'SERVER=', server,';'
+#     'DATABASE=', database,';'
+#     'UID=', user,';'
+#     'PWD=', passw
+# ])
+connString = (
+    r'DRIVER={ODBC Driver 18 for SQL server};'
+    r'SERVER=' + server + ';'
+    r'DATABASE=' + database + ';'
+    r'UID=' + user + ';'
+    r'PWD=' + passw
+)
 
 class Network:
     queries = {

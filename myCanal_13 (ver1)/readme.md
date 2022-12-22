@@ -1,6 +1,6 @@
 ## myCanal_13 (ver1)
 ### Dependencias:
-Django (https://github.com/django/django)
+* Django (https://github.com/django/django)
 
 ``pip install django``
 
